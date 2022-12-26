@@ -3,17 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  
   "scripts": {
     "build:vue": "rollup -c && rollup -c --environment MINIFY",
     "build:vue:watch": "rollup -c --watch",
     "build:style": "sass --no-charset ./src/styles/index.scss | node ./build/print-banner.js > dist/vmw-library.css && cleancss -o dist/vmw-library.min.css dist/vmw-library.css",
     "build:lib": "rimraf dist && npm run build:vue && npm run build:style",
     "publish:lib": "npm run build:lib && npm publish"
-},
-"peerDependencies": {
-    "vue": "^3.0.0"
-},
+  },
+  "peerDependencies": {
+    "vue": "^3.2.45"
+  },
   "author": "Peter Stacey",
   "license": "ISC",
   "devDependencies": {
