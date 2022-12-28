@@ -1,6 +1,6 @@
 @import "variables";
 
-.btn-vwm {
+.btn-vmw {
     position: relative;
     display: inline-flex;
     cursor: pointer;
@@ -17,9 +17,20 @@
         background-color: $primary;
         color: $white;
     }
+    &--primary:hover {
+        background-color: white;
+        color: $primary;
+        border-color: $primary;
+    }
+
     &--secondary {
         background-color: $secondary;
         color: $black;
+    }
+    &--secondary:hover {
+        background-color: $black;
+        color: $secondary;
+        border-color: $secondary;
     }
 
     // size
